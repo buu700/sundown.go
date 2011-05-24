@@ -1,4 +1,10 @@
-1. Install Go (golang)
+###Upskirt.Go
+
+>A wrapper around Upskirt with Cgo to expose one simple Markdown-to-HTML function for Go (golang)
+
+>Upskirt repository: https://github.com/tanoku/upskirt
+
+1. Install Go
 2. ./update.sh (optional; updates Upskirt code to latest version)
 3. make
 4. sudo make install
