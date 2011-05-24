@@ -4,7 +4,13 @@ Upskirt licence:
 https://github.com/tanoku/upskirt
 
 
-All files in this repository are directly pulled from the Upskirt repository, except for the following:
-  upskirt,go
-  upskirt.c
-  Makefile
+The following files are pulled directly from the Upskirt repository:  
+* array.c
+* array.h
+* buffer.c
+* buffer.h
+* html.c
+* html.h
+* html_smartypants.c
+* markdown.c
+* markdown.h
