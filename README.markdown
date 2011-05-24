@@ -13,6 +13,10 @@ The only function provided in this package is `Markdownify (string) string`, whi
 
 ---
 
+For example usage, see `example.go`.
+
+---
+
 Because Upskirt is used at GitHub, the format is GitHub-Flavoured Markdown; see: http://github.github.com/github-flavored-markdown/
 
 SmartyPants extensions are enabled; see: http://daringfireball.net/projects/smartypants/
