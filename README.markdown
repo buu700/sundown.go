@@ -5,9 +5,9 @@
 >Upskirt repository: https://github.com/tanoku/upskirt
 
 1. Install Go
-2. ./update.sh (optional; updates Upskirt code to latest version)
-3. make
-4. sudo make install
+2. `./update.sh` (optional; updates Upskirt code to latest version)
+3. `make`
+4. `sudo make install`
 5. ???
 6. Profit!
 
