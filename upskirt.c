@@ -31,8 +31,8 @@ struct buf* markdownify (char *in) {
 
 	
 	/* Markdown parse */
-	upshtml_renderer (&renderer, 0);
-	ups_markdown (ob, ib, &renderer, 0);
+	upshtml_renderer (&renderer, 255);
+	ups_markdown (ob, ib, &renderer, 255);
 	upshtml_free_renderer (&renderer);
 	bufrelease (ib);
 		

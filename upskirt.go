@@ -18,4 +18,4 @@ func Markdownify (md string) string {
     html := C.GoString ((*buf).data)
     C.bufrelease (buf)
     return html
-} 
+}
