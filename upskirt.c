@@ -13,10 +13,10 @@
 
 
 
-char* markdownify (char *in) {
+/* char* markdownify (char *in) { */
+struct buf* markdownify (char *in) {
 	struct buf *ib, *ob, *ob1;
 	struct mkd_renderer renderer;
-	char *html;
 
 	/* reading everything */
 	ib = bufnew (READ_UNIT);
@@ -39,10 +39,6 @@ char* markdownify (char *in) {
 	upshtml_smartypants (ob1, ob);
 	bufrelease (ob);
 	
-	html = malloc (strlen (ob1->data));
-	strcpy (html, ob1->data);
-	bufrelease (ob1);
 	
-	
-	return html;
+	return ob1;
 }
