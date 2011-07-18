@@ -2,7 +2,7 @@
 
 >A wrapper around Upskirt with Cgo to expose one simple Markdown-to-HTML function for Go (golang)
 
->Upskirt repository: https://github.com/tanoku/upskirt
+>Upskirt repository: https://github.com/tanoku/sundown
 
 1. Install Go
 2. `./update.sh` (optional; updates Upskirt code to latest version)

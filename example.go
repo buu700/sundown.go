@@ -8,5 +8,5 @@ import (
 // Example use
 
 func main() {
-	fmt.Printf (upskirt.Markdownify ("**Hello World**"))
+	fmt.Printf (upskirt.Markdownify ("**Hello World**") + "eee")
 }
