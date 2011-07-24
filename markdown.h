@@ -20,11 +20,10 @@
 #define UPSKIRT_MARKDOWN_H
 
 #include "buffer.h"
-#include "autolink.h"
 
-#define UPSKIRT_VERSION "1.15.2"
+#define UPSKIRT_VERSION "1.14.2"
 #define UPSKIRT_VER_MAJOR 1
-#define UPSKIRT_VER_MINOR 15
+#define UPSKIRT_VER_MINOR 14
 #define UPSKIRT_VER_REVISION 2
 
 /********************
@@ -100,17 +99,23 @@ struct mkd_renderer {
 #define MKD_TABLE_ALIGN_R (1 << 1)
 #define MKD_TABLE_ALIGN_CENTER (MKD_TABLE_ALIGN_L | MKD_TABLE_ALIGN_R)
 
+/*******************
+ * Auxiliar methods
+ *******************/
+int
+is_safe_link(const char *link, size_t link_len);
+
 /**********************
  * EXPORTED FUNCTIONS *
  **********************/
 
-/* sd_markdown * parses the input buffer and renders it into the output buffer */
+/* ups_markdown * parses the input buffer and renders it into the output buffer */
 extern void
-sd_markdown(struct buf *ob, struct buf *ib, const struct mkd_renderer *rndr, unsigned int extensions);
+ups_markdown(struct buf *ob, struct buf *ib, const struct mkd_renderer *rndr, unsigned int extensions);
 
-/* sd_version * returns the library version as major.minor.rev */
+/* ups_version * returns the library version as major.minor.rev */
 extern void
-sd_version(int *major, int *minor, int *revision);
+ups_version(int *major, int *minor, int *revision);
 
 #endif
 

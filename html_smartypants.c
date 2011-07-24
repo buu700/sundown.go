@@ -161,14 +161,16 @@ smartypants_cb__parens(struct buf *ob, struct smartypants_data *smrt, char previ
 static size_t
 smartypants_cb__dash(struct buf *ob, struct smartypants_data *smrt, char previous_char, const char *text, size_t size)
 {
-	if (size >= 3 && text[1] == '-' && text[2] == '-') {
-		BUFPUTSL(ob, "&mdash;");
-		return 2;
-	}
+	if (size >= 2) {
+		if (text[1] == '-') {
+			BUFPUTSL(ob, "&mdash;");
+			return 1;
+		}
 
-	if (size >= 2 && text[1] == '-') {
-		BUFPUTSL(ob, "&ndash;");
-		return 1;
+		if (word_boundary(previous_char) && word_boundary(text[1])) {
+			BUFPUTSL(ob, "&ndash;");
+			return 0;
+		}
 	}
 
 	bufputc(ob, text[0]);
@@ -262,36 +264,10 @@ smartypants_cb__dquote(struct buf *ob, struct smartypants_data *smrt, char previ
 static size_t
 smartypants_cb__ltag(struct buf *ob, struct smartypants_data *smrt, char previous_char, const char *text, size_t size)
 {
-	static const char *skip_tags[] = {"pre", "code", "kbd", "script"};
-	static const size_t skip_tags_count = 4;
-
-	size_t tag, i = 0;
+	size_t i = 0;
 
 	while (i < size && text[i] != '>')
 		i++;
-
-	for (tag = 0; tag < skip_tags_count; ++tag) {
-		if (sdhtml_tag(text, size, skip_tags[tag]) == HTML_TAG_OPEN)
-			break;
-	}
-
-	if (tag < skip_tags_count) {
-		for (;;) {
-			while (i < size && text[i] != '<')
-				i++;
-
-			if (i == size)
-				break;
-
-			if (sdhtml_tag(text + i, size - i, skip_tags[tag]) == HTML_TAG_CLOSE)
-				break;
-
-			i++;
-		}
-
-		while (i < size && text[i] != '>')
-			i++;
-	}
 
 	bufput(ob, text, i + 1);
 	return i;
@@ -328,7 +304,7 @@ static struct {
 #endif
 
 void
-sdhtml_smartypants(struct buf *ob, struct buf *text)
+upshtml_smartypants(struct buf *ob, struct buf *text)
 {
 	size_t i;
 	struct smartypants_data smrt = {0, 0};
