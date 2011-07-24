@@ -8,6 +8,6 @@ wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/src/buf
 wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/src/buffer.h
 wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/src/markdown.c
 wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/src/markdown.h
-wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/render/html.c
-wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/render/html.h
-wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/render/html_smartypants.c
+wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/html/html.c
+wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/html/html.h
+wget --no-check-certificate https://github.com/tanoku/sundown/raw/master/html/html_smartypants.c
