@@ -5,11 +5,10 @@
 >Upskirt repository: https://github.com/tanoku/sundown
 
 1. Install Go
-2. `./update.sh` (optional; updates Upskirt code to latest version)
-3. `make`
-4. `sudo make install`
-5. ???
-6. Profit!
+2. `make`
+3. `sudo make install`
+4. ???
+5. Profit!
 
 ---
 
