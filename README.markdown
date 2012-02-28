@@ -25,7 +25,3 @@ For example usage, see `example.go`.
 Because Upskirt is used at GitHub, the format is GitHub-Flavoured Markdown; see: http://github.github.com/github-flavored-markdown/
 
 SmartyPants extensions are enabled; see: http://daringfireball.net/projects/smartypants/
-
----
-
-Upskirt.Go was created on 2011-05-24 by Ryan Lester for use at Rewaved Corporation.
