@@ -1,4 +1,4 @@
-###Upskirt.Go
+###Upskirt.go
 
 >A wrapper around Upskirt with Cgo to expose one simple Markdown-to-HTML function for Go (golang)
 
