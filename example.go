@@ -1,12 +1,12 @@
 package main
 
 import (
-	"upskirt"
+	"sundown"
 	"fmt"
 )
 
 // Example use
 
 func main() {
-	fmt.Printf (upskirt.Markdownify ("**Hello World**") + "eee")
+	fmt.Printf (sundown.Markdownify ("**Hello World**") + "eee")
 }

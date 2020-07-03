@@ -1,6 +1,6 @@
 include $(GOROOT)/src/Make.inc
 
-TARG=upskirt
-CGOFILES=upskirt.go
+TARG=sundown
+CGOFILES=sundown.go
 
 include $(GOROOT)/src/Make.pkg

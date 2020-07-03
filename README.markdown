@@ -1,8 +1,10 @@
-###Upskirt.go
+### Sundown.go
 
->A wrapper around Upskirt with Cgo to expose one simple Markdown-to-HTML function for Go (golang)
+**UPDATE: This hasn't been actively maintained since 2011, and should be considered deprecated. I have no idea if it still works. There are probably better solutions out there. Use at your own risk.**
 
->Upskirt repository: https://github.com/tanoku/sundown
+> A wrapper around Sundown with Cgo to expose one simple Markdown-to-HTML function for Go (golang)
+>
+> Sundown repository: https://github.com/vmg/sundown
 
 1. Install Go
 2. `make`
@@ -12,7 +14,7 @@
 
 ---
 
-The package name is `upskirt`.
+The package name is `sundown`.
 
 The only function provided in this package is `Markdownify (string) string`, which takes a string of Markdown and returns a string of HTML.
 
@@ -22,6 +24,6 @@ For example usage, see `example.go`.
 
 ---
 
-Because Upskirt is used at GitHub, the format is GitHub-Flavoured Markdown; see: http://github.github.com/github-flavored-markdown/
+Because Sundown is used at GitHub, the format is GitHub-Flavoured Markdown; see: https://github.github.com/gfm
 
-SmartyPants extensions are enabled; see: http://daringfireball.net/projects/smartypants/
+SmartyPants extensions are enabled; see: https://daringfireball.net/projects/smartypants

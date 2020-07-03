@@ -1,4 +1,4 @@
-package upskirt
+package sundown
 
 
 /*
@@ -7,7 +7,7 @@ package upskirt
 #include "html.c"
 #include "html_smartypants.c"
 #include "markdown.c"
-#include "upskirt.c"
+#include "sundown.c"
 #cgo CFLAGS: -O3
 */
 import "C"
